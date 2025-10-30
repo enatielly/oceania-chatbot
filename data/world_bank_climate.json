@@ -1,0 +1,262 @@
+{
+  "metadados": {
+    "fonte": "World Bank - World Development Indicators",
+    "url": "https://data.worldbank.org/",
+    "api": "https://api.worldbank.org/v2/",
+    "pais": "Brasil",
+    "descricao": "Indicadores climáticos e ambientais com impacto oceânico",
+    "nota": "World Bank não possui indicadores oceânicos diretos, mas métricas de impacto",
+    "foco": [
+      "Emissões (acidificação oceânica)",
+      "Áreas protegidas marinhas",
+      "População em risco (elevação nível do mar)",
+      "Pressão sobre zonas costeiras"
+    ],
+    "licenca": "CC BY-4.0",
+    "data_coleta": "2025-10-29T23:17:07.712009",
+    "total_indicadores_consultados": 6,
+    "indicadores_com_dados": 4
+  },
+  "indicadores_climaticos": [
+    {
+      "indicador": "Áreas terrestres e marinhas protegidas (% do território total)",
+      "codigo": "ER.PTD.TOTL.ZS",
+      "relevancia_oceanica": "conservação_marinha",
+      "dados_temporais": [
+        {
+          "ano": "2024",
+          "valor": 29.4,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2023",
+          "valor": 29.5,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2022",
+          "valor": 29.3,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2021",
+          "valor": 29.3,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2020",
+          "valor": 29.2,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2019",
+          "valor": 29.2,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2018",
+          "valor": 28.6,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2017",
+          "valor": 20.7,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2016",
+          "valor": 20.7,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2015",
+          "valor": 20.4,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2014",
+          "valor": 20.4,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2013",
+          "valor": 18.9,
+          "unidade": "",
+          "pais": "Brazil"
+        }
+      ],
+      "fonte_api": "https://api.worldbank.org/v2/country/BR/indicator/ER.PTD.TOTL.ZS",
+      "data_coleta": "2025-10-29T23:17:02.654212"
+    },
+    {
+      "indicador": "Área terrestre onde elevação < 5 metros (% área total)",
+      "codigo": "AG.LND.EL5M.ZS",
+      "relevancia_oceanica": "vulnerabilidade_elevação_nível_mar",
+      "dados_temporais": [
+        {
+          "ano": "2015",
+          "valor": 0.854755123914608,
+          "unidade": "",
+          "pais": "Brazil"
+        }
+      ],
+      "fonte_api": "https://api.worldbank.org/v2/country/BR/indicator/AG.LND.EL5M.ZS",
+      "data_coleta": "2025-10-29T23:17:04.224378"
+    },
+    {
+      "indicador": "População vivendo em áreas < 5m elevação (% população)",
+      "codigo": "EN.POP.EL5M.ZS",
+      "relevancia_oceanica": "risco_elevação_nível_mar",
+      "dados_temporais": [
+        {
+          "ano": "2015",
+          "valor": 2.23302391070075,
+          "unidade": "",
+          "pais": "Brazil"
+        }
+      ],
+      "fonte_api": "https://api.worldbank.org/v2/country/BR/indicator/EN.POP.EL5M.ZS",
+      "data_coleta": "2025-10-29T23:17:05.464432"
+    },
+    {
+      "indicador": "População urbana (% do total)",
+      "codigo": "SP.URB.TOTL.IN.ZS",
+      "relevancia_oceanica": "pressão_zonas_costeiras",
+      "dados_temporais": [
+        {
+          "ano": "2024",
+          "valor": 88.016,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2023",
+          "valor": 87.788,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2022",
+          "valor": 87.555,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2021",
+          "valor": 87.317,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2020",
+          "valor": 87.073,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2019",
+          "valor": 86.824,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2018",
+          "valor": 86.569,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2017",
+          "valor": 86.309,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2016",
+          "valor": 86.042,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2015",
+          "valor": 85.77,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2014",
+          "valor": 85.492,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2013",
+          "valor": 85.209,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2012",
+          "valor": 84.923,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2011",
+          "valor": 84.631,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2010",
+          "valor": 84.335,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2009",
+          "valor": 84.044,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2008",
+          "valor": 83.749,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2007",
+          "valor": 83.448,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2006",
+          "valor": 83.143,
+          "unidade": "",
+          "pais": "Brazil"
+        },
+        {
+          "ano": "2005",
+          "valor": 82.834,
+          "unidade": "",
+          "pais": "Brazil"
+        }
+      ],
+      "fonte_api": "https://api.worldbank.org/v2/country/BR/indicator/SP.URB.TOTL.IN.ZS",
+      "data_coleta": "2025-10-29T23:17:06.711821"
+    }
+  ]
+}

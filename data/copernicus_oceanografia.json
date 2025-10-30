@@ -1,0 +1,68 @@
+{
+  "metadados": {
+    "fonte": "Copernicus Marine Service - European Union",
+    "url": "https://marine.copernicus.eu/",
+    "descricao": "Serviço europeu de monitoramento dos oceanos - dados globais",
+    "area_geografica": "Costa brasileira e Atlântico Sul",
+    "coordenadas": {
+      "latitude": "-34 a 5",
+      "longitude": "-53 a -30"
+    },
+    "tipo_dados": [
+      "Física: temperatura, salinidade, correntes, nível do mar",
+      "Biogeoquímica: clorofila, oxigênio, nutrientes, pH",
+      "Gelo marinho (quando aplicável)"
+    ],
+    "resolucao": "Alta resolução (1/12° - aproximadamente 9km)",
+    "cobertura_temporal": "Análises históricas + previsões 10 dias",
+    "licenca": "Dados gratuitos e abertos (registro necessário)",
+    "nota": "API requer token de autenticação - registro em marine.copernicus.eu",
+    "data_coleta": "2025-10-29T23:16:58.136160",
+    "produtos_consultados": 2,
+    "produtos_referenciados": 2
+  },
+  "produtos": [
+    {
+      "produto": "Análise e Previsão Física Global do Oceano",
+      "produto_id": "GLOBAL_ANALYSISFORECAST_PHY_001_024",
+      "variaveis": [
+        "temperatura",
+        "salinidade",
+        "correntes"
+      ],
+      "area_interesse": {
+        "regiao": "Águas Brasileiras - Atlântico Sul",
+        "lat_min": -34,
+        "lat_max": 5,
+        "lon_min": -53,
+        "lon_max": -30
+      },
+      "status": "Disponível via portal Copernicus",
+      "acesso": "Requer registro gratuito em marine.copernicus.eu",
+      "data_referencia": "2025-10-29T23:16:58.136117"
+    },
+    {
+      "produto": "Cor do Oceano - Clorofila",
+      "produto_id": "OCEANCOLOUR_GLO_BGC_L4_MY_009_104",
+      "variaveis": [
+        "clorofila"
+      ],
+      "area_interesse": {
+        "regiao": "Águas Brasileiras - Atlântico Sul",
+        "lat_min": -34,
+        "lat_max": 5,
+        "lon_min": -53,
+        "lon_max": -30
+      },
+      "status": "Disponível via portal Copernicus",
+      "acesso": "Requer registro gratuito em marine.copernicus.eu",
+      "data_referencia": "2025-10-29T23:16:58.136148"
+    }
+  ],
+  "instrucoes_acesso": {
+    "passo_1": "Criar conta gratuita em https://marine.copernicus.eu/",
+    "passo_2": "Obter credenciais de acesso à API",
+    "passo_3": "Usar Python library: copernicusmarine",
+    "documentacao": "https://help.marine.copernicus.eu/en/collections/4060068-copernicus-marine-toolbox"
+  }
+}

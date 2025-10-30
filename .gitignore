@@ -1,0 +1,24 @@
+# Ignorar variáveis de ambiente
+.env
+
+# Ignorar índice FAISS e cache (serão regenerados)
+faiss_index
+chunks_metadata.pkl
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar dados locais (opcionalmente - descomente se não quiser commitar os JSONs)
+# data/*.json
