@@ -21,7 +21,7 @@ Ocean AI é um chatbot especializado que responde perguntas sobre as águas mari
 
 - **Frontend**: Streamlit
 - **RAG Engine**: SentenceTransformers + FAISS
-- **LLM**: Llama 3.1 70B via Groq API
+- **LLM**: Llama 3.3 70B via Groq API
 - **Embeddings**: paraphrase-multilingual-mpnet-base-v2
 
 ## 🚀 Como Executar Localmente
@@ -167,7 +167,7 @@ No `app.py`, função `gerar_resposta`:
 
 ```python
 completion = groq_client.chat.completions.create(
-    model="llama-3.1-70b-versatile",  # Outros: mixtral-8x7b, llama-3.1-8b
+    model="llama-3.3-70b-versatile",  # Outros: llama-3.1-8b-instant, mixtral-8x7b
     ...
 )
 ```

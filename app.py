@@ -153,7 +153,7 @@ Responda a pergunta usando APENAS as informações do contexto acima. Cite as fo
     # 5. Chamar Groq API
     try:
         completion = groq_client.chat.completions.create(
-            model="llama-3.1-70b-versatile",  # Modelo Llama 3.1 70B
+            model="llama-3.3-70b-versatile",  # Modelo Llama 3.3 70B atualizado
             messages=messages,
             temperature=0.1,  # Baixa temperatura para respostas mais factuais
             max_tokens=1024,
