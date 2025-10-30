@@ -237,14 +237,9 @@ Este projeto é de código aberto. Os dados pertencem às suas respectivas fonte
 ## 🙏 Créditos
 
 Dados fornecidos por:
-- OBIS (UNESCO-IOC)
-- GBIF
-- Copernicus Marine Service
-- ICMBio
-- Dados.gov.br
-- World Bank
-- IPCC
-- UNESCO Ocean Decade
+- **OBIS** - Ocean Biodiversity Information System (UNESCO-IOC)
+- **GBIF** - Global Biodiversity Information Facility
+- **Copernicus Marine Service** - European Union's Earth Observation Programme
 
 ---
 
