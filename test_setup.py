@@ -23,12 +23,7 @@ def verificar_arquivos():
     arquivos_data = [
         'data/obis_ocorrencias.json',
         'data/gbif_ocorrencias.json',
-        'data/copernicus_oceanografia.json',
-        'data/icmbio_especies_ameacadas.json',
-        'data/unidades_conservacao.json',
-        'data/world_bank_climate.json',
-        'data/ipcc_relatorios_oceanos.json',
-        'data/decada_oceanos.json'
+        'data/copernicus_oceanografia.json'
     ]
     
     todos_ok = True

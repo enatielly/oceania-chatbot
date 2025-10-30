@@ -17,7 +17,7 @@
     "cobertura_temporal": "Análises históricas + previsões 10 dias",
     "licenca": "Dados gratuitos e abertos (registro necessário)",
     "nota": "API requer token de autenticação - registro em marine.copernicus.eu",
-    "data_coleta": "2025-10-29T23:16:58.136160",
+    "data_coleta": "2025-10-30T00:38:04.243412",
     "produtos_consultados": 2,
     "produtos_referenciados": 2
   },
@@ -39,7 +39,7 @@
       },
       "status": "Disponível via portal Copernicus",
       "acesso": "Requer registro gratuito em marine.copernicus.eu",
-      "data_referencia": "2025-10-29T23:16:58.136117"
+      "data_referencia": "2025-10-30T00:38:04.243341"
     },
     {
       "produto": "Cor do Oceano - Clorofila",
@@ -56,7 +56,7 @@
       },
       "status": "Disponível via portal Copernicus",
       "acesso": "Requer registro gratuito em marine.copernicus.eu",
-      "data_referencia": "2025-10-29T23:16:58.136148"
+      "data_referencia": "2025-10-30T00:38:04.243393"
     }
   ],
   "instrucoes_acesso": {

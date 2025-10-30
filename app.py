@@ -40,13 +40,6 @@ st.markdown("""
         color: #666;
         margin-bottom: 2rem;
     }
-    .source-box {
-        background-color: #f0f8ff;
-        border-left: 4px solid #1E88E5;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 4px;
-    }
     .warning-box {
         background-color: #fff3cd;
         border-left: 4px solid #ffc107;
@@ -131,10 +124,10 @@ REGRAS ABSOLUTAS:
 6. Sempre cite a URL da fonte quando disponível.
 
 FORMATO DE CITAÇÃO:
-- Use [Fonte: OBIS] para dados do OBIS
-- Use [Fonte: GBIF] para dados do GBIF
-- Use [Fonte: World Bank] para indicadores climáticos
-- E assim por diante...
+- Use [Fonte: OBIS] para dados de biodiversidade marinha do OBIS
+- Use [Fonte: GBIF] para dados de ocorrências de espécies do GBIF
+- Use [Fonte: Copernicus] para dados oceanográficos do Copernicus Marine
+- Sempre inclua a URL da fonte quando disponível
 
 Seja preciso, objetivo e sempre referencie suas fontes."""
 
@@ -210,14 +203,10 @@ def main():
     with st.sidebar:
         st.markdown("### 📊 Base de Dados")
         st.info(f"""
+        **Fontes de Dados Ativas:**
         - **OBIS**: Biodiversidade marinha
         - **GBIF**: Ocorrências de espécies
-        - **Copernicus**: Dados oceanográficos
-        - **World Bank**: Indicadores climáticos
-        - **IPCC**: Relatórios sobre clima
-        - **ICMBio**: Espécies ameaçadas
-        - **Década dos Oceanos**: Programas UNESCO
-        - **Dados.gov.br**: Unidades de conservação
+        - **Copernicus**: Dados oceanográficos ⚠️ *Em desenvolvimento*
         
         **Total de chunks**: {len(rag.chunks)}
         """)
@@ -226,6 +215,12 @@ def main():
         st.warning("""
         Este chatbot responde APENAS com base nos dados coletados.
         Não possui conhecimento geral sobre oceanos.
+        """)
+        
+        st.markdown("### 🚧 Avisos")
+        st.info("""
+        **Copernicus Marine**: A integração completa com a API Copernicus ainda está em desenvolvimento. 
+        Os dados mostrados são referências aos produtos disponíveis.
         """)
         
         st.markdown("### 🔬 Tecnologia")
@@ -259,19 +254,17 @@ def main():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
             
-            # Exibir fontes se disponível
-            if message["role"] == "assistant" and "fontes" in message:
-                if message["fontes"]:
-                    with st.expander("📚 Fontes Consultadas"):
-                        for fonte in message["fontes"]:
-                            st.markdown(f"""
-                            <div class="source-box">
-                                <strong>{fonte['nome']}</strong><br>
-                                <small>Arquivo: {fonte['arquivo']}</small><br>
-                                <small>URL: <a href="{fonte['url']}" target="_blank">{fonte['url']}</a></small><br>
-                                <small>Seções: {', '.join([s['secao'] for s in fonte['secoes'][:3]])}</small>
-                            </div>
-                            """, unsafe_allow_html=True)
+            # Exibir fontes se disponível (apenas para assistente)
+            if message["role"] == "assistant" and "fontes" in message and message["fontes"]:
+                with st.expander("📚 Fontes Consultadas"):
+                    for fonte in message["fontes"]:
+                        st.markdown(f"**{fonte['nome']}**")
+                        st.caption(f"📄 {fonte['arquivo']}")
+                        st.caption(f"🔗 [{fonte['url']}]({fonte['url']})")
+                        if fonte['secoes']:
+                            secoes_texto = ', '.join([s['secao'] for s in fonte['secoes'][:3]])
+                            st.caption(f"📑 Seções: {secoes_texto}")
+                        st.markdown("---")
     
     # Input do usuário
     if prompt := st.chat_input("Pergunte sobre o Oceano Atlântico e a costa brasileira..."):
@@ -292,14 +285,13 @@ def main():
             if resultado['fontes']:
                 with st.expander("📚 Fontes Consultadas"):
                     for fonte in resultado['fontes']:
-                        st.markdown(f"""
-                        <div class="source-box">
-                            <strong>{fonte['nome']}</strong><br>
-                            <small>Arquivo: {fonte['arquivo']}</small><br>
-                            <small>URL: <a href="{fonte['url']}" target="_blank">{fonte['url']}</a></small><br>
-                            <small>Seções: {', '.join([s['secao'] for s in fonte['secoes'][:3]])}</small>
-                        </div>
-                        """, unsafe_allow_html=True)
+                        st.markdown(f"**{fonte['nome']}**")
+                        st.caption(f"📄 {fonte['arquivo']}")
+                        st.caption(f"🔗 [{fonte['url']}]({fonte['url']})")
+                        if fonte['secoes']:
+                            secoes_texto = ', '.join([s['secao'] for s in fonte['secoes'][:3]])
+                            st.caption(f"📑 Seções: {secoes_texto}")
+                        st.markdown("---")
             
             # Adicionar ao histórico
             st.session_state.messages.append({

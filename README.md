@@ -4,18 +4,15 @@ Sistema de chat inteligente com RAG (Retrieval-Augmented Generation) para consul
 
 ## 🌊 Sobre o Projeto
 
-Ocean AI é um chatbot especializado que responde perguntas sobre as águas marinhas brasileiras no Oceano Atlântico usando **apenas dados oficiais** de 8 fontes científicas.
+Ocean AI é um chatbot especializado que responde perguntas sobre as águas marinhas brasileiras no Oceano Atlântico usando **apenas dados oficiais** de fontes científicas internacionais.
 
 ### Fontes de Dados
 
-1. **OBIS** - Ocean Biodiversity Information System
-2. **GBIF** - Global Biodiversity Information Facility
-3. **Copernicus Marine** - Dados oceanográficos europeus
-4. **ICMBio SALVE** - Espécies ameaçadas
-5. **Dados.gov.br** - Unidades de conservação
-6. **World Bank** - Indicadores climáticos
-7. **IPCC** - Relatórios sobre mudanças climáticas
-8. **UNESCO** - Década dos Oceanos
+1. **OBIS** - Ocean Biodiversity Information System (biodiversidade marinha)
+2. **GBIF** - Global Biodiversity Information Facility (ocorrências de espécies)
+3. **Copernicus Marine** - Dados oceanográficos europeus ⚠️ *Em desenvolvimento*
+
+> **Nota**: Este projeto foi simplificado para usar apenas fontes de dados confiáveis e estáveis. Fontes brasileiras como ICMBio, Dados.gov.br e outras foram removidas devido a instabilidade das APIs ou falta de dados relevantes.
 
 ### Tecnologias
 
@@ -59,7 +56,7 @@ GROQ_API_KEY=sua_chave_aqui
 python coletar_dados_amazonia_azul.py
 ```
 
-Isso irá criar a pasta `data/` com 8 arquivos JSON.
+Isso irá criar a pasta `data/` com 3 arquivos JSON (OBIS, GBIF, Copernicus).
 
 ### 5. Execute o chatbot
 

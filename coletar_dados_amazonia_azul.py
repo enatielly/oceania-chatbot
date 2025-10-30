@@ -842,16 +842,11 @@ def executar_coleta():
     
     os.makedirs('data', exist_ok=True)
     
-    # Definir arquivos esperados
+    # Definir arquivos esperados (apenas fontes com dados úteis)
     arquivos_esperados = [
         'obis_ocorrencias.json',
         'gbif_ocorrencias.json',
-        'copernicus_oceanografia.json',
-        'icmbio_especies_ameacadas.json',
-        'unidades_conservacao.json',
-        'world_bank_climate.json',
-        'ipcc_relatorios_oceanos.json',
-        'decada_oceanos.json'
+        'copernicus_oceanografia.json'
     ]
     
     # Limpar JSONs obsoletos antes de começar
@@ -859,7 +854,7 @@ def executar_coleta():
     
     print("\n" + "="*80)
     print("🇧🇷 OCEANIA - COLETOR AUTOMÁTICO DE DADOS")
-    print("   100% Fontes Oficiais | Zero Hardcoding")
+    print("   Fontes Ativas: OBIS, GBIF, Copernicus Marine")
     print("="*80)
     print(f"\n⏰ Início: {datetime.now().strftime('%H:%M:%S')}\n")
     
@@ -891,26 +886,6 @@ def executar_coleta():
     dados_copernicus = coletar_copernicus_marine()
     salvar_json(dados_copernicus, 'data/copernicus_oceanografia.json')
     
-    # 4. ICMBio SALVE
-    dados_salve = coletar_icmbio_salve()
-    salvar_json(dados_salve, 'data/icmbio_especies_ameacadas.json')
-    
-    # 5. Unidades de Conservação
-    dados_ucs = coletar_unidades_conservacao()
-    salvar_json(dados_ucs, 'data/unidades_conservacao.json')
-    
-    # 6. World Bank - Mudanças Climáticas
-    dados_climate = coletar_world_bank_climate()
-    salvar_json(dados_climate, 'data/world_bank_climate.json')
-    
-    # 7. IPCC - Relatórios sobre Oceanos
-    dados_ipcc = coletar_ipcc_relatorios()
-    salvar_json(dados_ipcc, 'data/ipcc_relatorios_oceanos.json')
-    
-    # 8. Década dos Oceanos
-    dados_decada = coletar_decada_oceanos()
-    salvar_json(dados_decada, 'data/decada_oceanos.json')
-    
     # Relatório final
     print("\n" + "="*80)
     print("✅ COLETA CONCLUÍDA")
@@ -920,18 +895,11 @@ def executar_coleta():
     print("   • obis_ocorrencias.json")
     print("   • gbif_ocorrencias.json")
     print("   • copernicus_oceanografia.json")
-    print("   • icmbio_especies_ameacadas.json")
-    print("   • unidades_conservacao.json")
-    print("   • world_bank_climate.json")
-    print("   • ipcc_relatorios_oceanos.json")
-    print("   • decada_oceanos.json")
     
     print("\n📊 Estatísticas:")
     print(f"   • OBIS: {dados_obis['metadados']['especies_com_dados']}/{len(especies_alvo)} espécies")
     print(f"   • GBIF: {dados_gbif['metadados']['especies_com_dados']}/{len(especies_alvo)} espécies")
     print(f"   • Copernicus: {dados_copernicus['metadados']['produtos_referenciados']}/{dados_copernicus['metadados']['produtos_consultados']} produtos oceanográficos")
-    print(f"   • World Bank: {dados_climate['metadados']['indicadores_com_dados']}/{dados_climate['metadados']['total_indicadores_consultados']} indicadores climáticos")
-    print(f"   • IPCC: {len(dados_ipcc.get('relatorios_principais', {}))} relatórios referenciados")
     
     print(f"\n⏰ Conclusão: {datetime.now().strftime('%H:%M:%S')}")
     print("\n🚀 Próximo passo: streamlit run app.py\n")

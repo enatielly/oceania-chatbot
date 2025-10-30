@@ -6,7 +6,7 @@
     "operador": "UNESCO-IOC",
     "filtro_geografico": "Águas brasileiras (ZEE)",
     "licenca": "CC-BY 4.0",
-    "data_coleta": "2025-10-29T23:14:58.848146",
+    "data_coleta": "2025-10-30T00:37:25.756970",
     "total_especies_consultadas": 10,
     "especies_com_dados": 10
   },
@@ -1217,7 +1217,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:28.167783"
+      "data_coleta": "2025-10-30T00:36:47.544886"
     },
     {
       "nome_cientifico": "Caretta caretta",
@@ -2425,7 +2425,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:31.677196"
+      "data_coleta": "2025-10-30T00:36:52.544658"
     },
     {
       "nome_cientifico": "Eretmochelys imbricata",
@@ -3609,7 +3609,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:34.961224"
+      "data_coleta": "2025-10-30T00:36:58.560660"
     },
     {
       "nome_cientifico": "Trichechus manatus",
@@ -3677,7 +3677,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:37.947763"
+      "data_coleta": "2025-10-30T00:37:01.705543"
     },
     {
       "nome_cientifico": "Sotalia guianensis",
@@ -4885,7 +4885,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:41.232163"
+      "data_coleta": "2025-10-30T00:37:05.410746"
     },
     {
       "nome_cientifico": "Tursiops truncatus",
@@ -5337,7 +5337,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:44.241486"
+      "data_coleta": "2025-10-30T00:37:09.147178"
     },
     {
       "nome_cientifico": "Epinephelus itajara",
@@ -6197,7 +6197,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:47.488147"
+      "data_coleta": "2025-10-30T00:37:12.939782"
     },
     {
       "nome_cientifico": "Manta birostris",
@@ -6229,7 +6229,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:50.444730"
+      "data_coleta": "2025-10-30T00:37:16.224029"
     },
     {
       "nome_cientifico": "Rhincodon typus",
@@ -6801,7 +6801,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:53.851467"
+      "data_coleta": "2025-10-30T00:37:20.226267"
     },
     {
       "nome_cientifico": "Carcharodon carcharias",
@@ -6833,7 +6833,7 @@
         }
       ],
       "fonte_api": "https://api.obis.org/v3/occurrence",
-      "data_coleta": "2025-10-29T23:14:56.847964"
+      "data_coleta": "2025-10-30T00:37:23.756737"
     }
   ]
 }

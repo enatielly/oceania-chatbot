@@ -6,7 +6,7 @@
     "descricao": "Infraestrutura global de dados sobre biodiversidade",
     "filtro_geografico": "Brasil (country=BR)",
     "licenca": "Variável por dataset - ver campo licenca em cada registro",
-    "data_coleta": "2025-10-29T23:16:57.926000",
+    "data_coleta": "2025-10-30T00:38:03.762287",
     "total_especies_consultadas": 10,
     "especies_com_dados": 10
   },
@@ -1617,7 +1617,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:15:03.542784"
+      "data_coleta": "2025-10-30T00:37:28.382810"
     },
     {
       "nome_cientifico": "Caretta caretta",
@@ -3225,7 +3225,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:15:36.739991"
+      "data_coleta": "2025-10-30T00:37:33.517607"
     },
     {
       "nome_cientifico": "Eretmochelys imbricata",
@@ -4833,7 +4833,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:15:41.778309"
+      "data_coleta": "2025-10-30T00:37:42.418761"
     },
     {
       "nome_cientifico": "Trichechus manatus",
@@ -5353,7 +5353,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:15:44.605459"
+      "data_coleta": "2025-10-30T00:37:45.359260"
     },
     {
       "nome_cientifico": "Sotalia guianensis",
@@ -6961,7 +6961,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:22.463560"
+      "data_coleta": "2025-10-30T00:37:48.919469"
     },
     {
       "nome_cientifico": "Tursiops truncatus",
@@ -8569,7 +8569,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:26.292392"
+      "data_coleta": "2025-10-30T00:37:52.352711"
     },
     {
       "nome_cientifico": "Epinephelus itajara",
@@ -9185,7 +9185,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:29.109714"
+      "data_coleta": "2025-10-30T00:37:55.296199"
     },
     {
       "nome_cientifico": "Manta birostris",
@@ -9273,7 +9273,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:31.203360"
+      "data_coleta": "2025-10-30T00:37:57.304117"
     },
     {
       "nome_cientifico": "Rhincodon typus",
@@ -9425,7 +9425,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:33.516967"
+      "data_coleta": "2025-10-30T00:37:59.459644"
     },
     {
       "nome_cientifico": "Carcharodon carcharias",
@@ -11033,7 +11033,7 @@
         }
       ],
       "fonte_api": "https://api.gbif.org/v1/occurrence/search",
-      "data_coleta": "2025-10-29T23:16:56.925809"
+      "data_coleta": "2025-10-30T00:38:02.762085"
     }
   ]
 }

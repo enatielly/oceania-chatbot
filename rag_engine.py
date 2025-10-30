@@ -37,12 +37,7 @@ class OceanRAG:
         arquivos_json = [
             'obis_ocorrencias.json',
             'gbif_ocorrencias.json',
-            'copernicus_oceanografia.json',
-            'icmbio_especies_ameacadas.json',
-            'unidades_conservacao.json',
-            'world_bank_climate.json',
-            'ipcc_relatorios_oceanos.json',
-            'decada_oceanos.json'
+            'copernicus_oceanografia.json'
         ]
         
         documentos = []
@@ -147,6 +142,9 @@ class OceanRAG:
                             texto += f"Latitude: {area.get('lat_min')} a {area.get('lat_max')}\n"
                             texto += f"Longitude: {area.get('lon_min')} a {area.get('lon_max')}\n"
                         
+                        texto += f"\n⚠️ AVISO: Integração Copernicus em desenvolvimento. "
+                        texto += f"Dados completos disponíveis em {url}\n"
+                        
                         chunks.append({
                             'texto': texto,
                             'fonte': fonte,
@@ -155,94 +153,6 @@ class OceanRAG:
                             'tipo': 'oceanografia',
                             'secao': produto.get('produto', 'Produto')
                         })
-            
-            elif 'world_bank' in arquivo:
-                # Indicadores climáticos
-                if 'indicadores_climaticos' in conteudo:
-                    for indicador in conteudo['indicadores_climaticos']:
-                        texto = f"Indicador: {indicador.get('indicador', 'N/A')}\n"
-                        texto += f"Fonte: {fonte}\n"
-                        texto += f"Código: {indicador.get('codigo', 'N/A')}\n"
-                        texto += f"Relevância Oceânica: {indicador.get('relevancia_oceanica', 'N/A')}\n\n"
-                        
-                        # Dados temporais recentes (últimos 5 anos)
-                        dados_temporais = indicador.get('dados_temporais', [])[:5]
-                        if dados_temporais:
-                            texto += "Dados Recentes:\n"
-                            for dado in dados_temporais:
-                                texto += f"- {dado.get('ano')}: {dado.get('valor')} {dado.get('unidade', '')}\n"
-                        
-                        chunks.append({
-                            'texto': texto,
-                            'fonte': fonte,
-                            'url': url,
-                            'arquivo': arquivo,
-                            'tipo': 'indicador_climatico',
-                            'secao': indicador.get('indicador', 'Indicador')
-                        })
-            
-            elif 'ipcc' in arquivo:
-                # Relatórios IPCC
-                texto = f"Fonte: {fonte}\n\n"
-                
-                if 'relatorios_principais' in conteudo:
-                    texto += "Relatórios Principais do IPCC:\n"
-                    for key, url_rel in conteudo['relatorios_principais'].items():
-                        texto += f"- {key}: {url_rel}\n"
-                
-                if 'temas_oceanicos_cobertos' in conteudo:
-                    texto += "\nTemas Oceânicos Cobertos:\n"
-                    for tema in conteudo['temas_oceanicos_cobertos']:
-                        texto += f"- {tema}\n"
-                
-                if 'areas_relevancia_brasil' in conteudo:
-                    texto += "\nÁreas de Relevância para o Brasil:\n"
-                    for area in conteudo['areas_relevancia_brasil']:
-                        texto += f"- {area}\n"
-                
-                chunks.append({
-                    'texto': texto,
-                    'fonte': fonte,
-                    'url': url,
-                    'arquivo': arquivo,
-                    'tipo': 'relatorios',
-                    'secao': 'Relatórios IPCC'
-                })
-            
-            elif 'decada_oceanos' in arquivo:
-                # Década dos Oceanos
-                texto = f"Fonte: {fonte}\n"
-                texto += f"Período: {conteudo.get('metadados', {}).get('periodo', 'N/A')}\n\n"
-                
-                if 'objetivos_decada' in conteudo:
-                    texto += "Objetivos da Década dos Oceanos:\n"
-                    for obj in conteudo['objetivos_decada']:
-                        texto += f"{obj.get('numero')}. {obj.get('titulo')}: {obj.get('descricao')}\n\n"
-                
-                chunks.append({
-                    'texto': texto,
-                    'fonte': fonte,
-                    'url': url,
-                    'arquivo': arquivo,
-                    'tipo': 'programa',
-                    'secao': 'Década dos Oceanos'
-                })
-                
-                # Chunk separado para áreas prioritárias do Brasil
-                if 'areas_prioritarias_brasil' in conteudo:
-                    texto_areas = f"Fonte: {fonte}\n\n"
-                    texto_areas += "Áreas Prioritárias da Década dos Oceanos no Brasil:\n"
-                    for area in conteudo['areas_prioritarias_brasil']:
-                        texto_areas += f"- {area}\n"
-                    
-                    chunks.append({
-                        'texto': texto_areas,
-                        'fonte': fonte,
-                        'url': url,
-                        'arquivo': arquivo,
-                        'tipo': 'programa',
-                        'secao': 'Prioridades Brasil'
-                    })
             
             else:
                 # Outros arquivos - chunk genérico
