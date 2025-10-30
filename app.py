@@ -233,12 +233,22 @@ def main():
         - **RAG**: Retrieval-Augmented Generation
         - **Embeddings**: SentenceTransformers
         - **Busca**: FAISS
-        - **LLM**: Llama 3.1 70B (Groq)
+        - **LLM**: Llama 3.3 70B (Groq)
         """)
         
-        if st.button("🔄 Recarregar Base de Dados"):
-            st.cache_resource.clear()
-            st.rerun()
+        st.markdown("---")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            if st.button("🔄 Recarregar Base"):
+                st.cache_resource.clear()
+                st.rerun()
+        
+        with col2:
+            if st.button("🗑️ Limpar Chat"):
+                st.session_state.messages = []
+                st.rerun()
     
     # Inicializar histórico do chat
     if "messages" not in st.session_state:
@@ -306,19 +316,24 @@ def main():
         
         with col1:
             st.markdown("""
-            - Quais espécies marinhas foram registradas?
-            - Onde ocorre a tartaruga verde no Brasil?
-            - Quais são os indicadores de mudanças climáticas?
-            - O que são os objetivos da Década dos Oceanos?
+            - Quais espécies de tartarugas foram registradas?
+            - Existem dados sobre Chelonia mydas?
+            - Mostre registros de tartaruga marinha
+            - Quais são os objetivos da Década dos Oceanos?
             """)
         
         with col2:
             st.markdown("""
             - Quais dados oceanográficos estão disponíveis?
+            - Quais indicadores climáticos afetam o Oceano Atlântico?
             - Qual a temperatura do oceano na costa brasileira?
-            - Quais espécies estão ameaçadas?
             - Quantas unidades de conservação marinha existem?
             """)
+    else:
+        # Botão para nova conversa quando já há mensagens
+        if st.button("🔄 Nova Conversa", use_container_width=True):
+            st.session_state.messages = []
+            st.rerun()
 
 
 # ============================================================================
